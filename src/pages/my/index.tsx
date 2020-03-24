@@ -1,6 +1,6 @@
-import Taro, { Component } from '@tarojs/taro';
-import { View } from '@tarojs/components';
-import './index.less';
+import Taro, { Component } from '@tarojs/taro'
+import { View } from '@tarojs/components'
+import './index.less'
 
 import Profile from './Profile/index'
 import Orders from './Orders/index'
@@ -20,12 +20,15 @@ interface MyStateProps {
   props: myState
 }
 
+// document.title = '我的'
+
 class MyPage extends Component<MyStateProps> {
   config = {
     navigationBarTitleText: '我的'
   }
+  
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       detail: {
         id: '',
@@ -34,32 +37,32 @@ class MyPage extends Component<MyStateProps> {
         nickName: '',
       },
       showBindPhone: false
-    };
+    }
   }
-
-    componentDidMount() {
-    }
-
-    componentDidShow() {
-    }
-
-    componentDidHide() {
-    }
-
-    componentDidCatchError() {
-    }
-
+  
+  componentDidMount() {
+  }
+  
+  componentDidShow() {
+  }
+  
+  componentDidHide() {
+  }
+  
+  componentDidCatchError() {
+  }
+  
   render() {
-    const { detail, showBindPhone }: any = this.state;
-    console.log('detail', detail);
-    console.log('showBindPhone', showBindPhone);
+    const { detail, showBindPhone }: any = this.state
+    console.log('detail', detail)
+    console.log('showBindPhone', showBindPhone)
     return (
       <View className='my-page'>
-          <Profile />
-          <Orders />
-          <Links />
+        <Profile />
+        <Orders />
+        <Links />
       </View>
-    );
+    )
   }
 }
 
